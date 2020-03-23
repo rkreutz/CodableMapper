@@ -21,7 +21,8 @@ public extension KeyedDecodingContainer {
     /// Decodes a key-value pair into a DecodableMapper wrapped value in case the DecodableMapper accepts optionals. This is done so that optionals using the DecodableMapper property wrapper may be decoded as `nil` in case their key does't exist in the decoded data.
     /// - Parameter type: the type to be decoded
     /// - Parameter key: the key of the key-value pair to be decoded
-    func decode<Provider, Value>(_ type: DecodableMapper<Provider>.Type, forKey key: Key) throws -> DecodableMapper<Provider> where Provider.Value == Optional<Value> {
+    func decode<Provider, Value>(_ type: DecodableMapper<Provider>.Type, forKey key: Key) throws -> DecodableMapper<Provider>
+        where Provider.Value == Value? {
 
         if let rawValue = try decodeIfPresent(Provider.RawValue.self, forKey: key) {
 

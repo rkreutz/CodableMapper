@@ -7,7 +7,7 @@ let package = Package(
     products: [
         .library(
             name: "CodableMapper",
-            targets: ["CodableMapper"]),
+            targets: ["CodableMapper"])
     ],
     targets: [
         .target(
@@ -15,6 +15,6 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "CodableMapperTests",
-            dependencies: ["CodableMapper"]),
+            dependencies: ["CodableMapper"])
     ]
 )

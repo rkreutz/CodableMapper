@@ -21,7 +21,8 @@ public extension KeyedEncodingContainer {
     /// Encodes the EncodableMapper wrapped value into the encoding container. In case it is a `nil` value it doesn't encode anything.
     /// - Parameter value: the value to be encoded
     /// - Parameter key: the key to where the value should be encoded
-    mutating func encode<Provider, Value>(_ value: EncodableMapper<Provider>, forKey key: Key) throws where Provider.Value == Optional<Value> {
+    mutating func encode<Provider, Value>(_ value: EncodableMapper<Provider>, forKey key: Key) throws
+        where Provider.Value == Value? {
 
         guard let value = value.wrappedValue else { return }
         try encode(try Provider.map(value: value), forKey: key)

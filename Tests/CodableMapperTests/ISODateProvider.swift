@@ -14,7 +14,7 @@ struct ISODateProvider: CodableMapperProvider {
         return formatter
     }()
 
-    public enum Error: Swift.Error {
+    enum Error: Swift.Error {
 
         case failed
     }

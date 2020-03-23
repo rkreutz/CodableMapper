@@ -25,15 +25,15 @@ final class CodableMapperTests: XCTestCase {
         )
         XCTAssertEqual(
             try decoder.decode(Person.self, from: json).dateOfBirth,
-            Date(timeIntervalSince1970: 631152000.0)
+            Date(timeIntervalSince1970: 631_152_000.0)
         )
         XCTAssertEqual(
             try decoder.decode(Person.self, from: json).dateAdded,
-            Date(timeIntervalSince1970: 1578659400.0)
+            Date(timeIntervalSince1970: 1_578_659_400.0)
         )
         XCTAssertEqual(
             try decoder.decode(Person.self, from: json).lastUpdated,
-            Date(timeIntervalSince1970: 1584981932.0)
+            Date(timeIntervalSince1970: 1_584_981_932.0)
         )
     }
 
@@ -57,11 +57,11 @@ final class CodableMapperTests: XCTestCase {
         )
         XCTAssertEqual(
             try decoder.decode(Person.self, from: json).dateOfBirth,
-            Date(timeIntervalSince1970: 631152000.0)
+            Date(timeIntervalSince1970: 631_152_000.0)
         )
         XCTAssertEqual(
             try decoder.decode(Person.self, from: json).dateAdded,
-            Date(timeIntervalSince1970: 1578659400.0)
+            Date(timeIntervalSince1970: 1_578_659_400.0)
         )
         XCTAssertNil(try decoder.decode(Person.self, from: json).lastUpdated)
     }
