@@ -1,6 +1,8 @@
 # CodableMapper
 ![Swift 5.1](https://img.shields.io/badge/Swift-5.1-orange.svg)
 [![Swift Package Manager](https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager)
+![MacOS](https://github.com/rkreutz/CodableMapper/workflows/MacOS/badge.svg?branch=master&event=push)
+![Linux](https://github.com/rkreutz/CodableMapper/workflows/Linux/badge.svg?branch=master&event=push)
 
 **CodableMapper** is a Swift µpackage that provides an interface (through Property Wrappers) to define custom mappers for individual properties in a `Codable` struct.
 
